@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState} from "react";
 import {Event} from "./Event";
-import ArrowLeft from './assets/arrow-left.png'
 
 const CloudDrizzle = require('./assets/cloud-drizzle.svg') as string
 
@@ -186,11 +185,11 @@ export function Main() {
                                 +19
                                 <span className="a11y-hidden">°</span>
 
-                                <img
-                                    src={CloudDrizzle}
+                                <div
+                                    role="img"
                                     className="hero-dashboard__icon hero-dashboard__icon_rain"
-                                    alt="Дождь"
-                                ></img>
+                                    aria-label="Дождь"
+                                />
                             </div>
                         </li>
                     </ul>

@@ -105,6 +105,10 @@ body, html {
     padding: 0
 }
 
+.hero-dashboard__icon_rain {
+    background-image: url(../assets/cloud-drizzle.svg);
+}
+
 .header__link {
     font-weight: 700;
     opacity: .6;
@@ -251,6 +255,9 @@ body, html {
     width: 1.625rem;
     height: 1.625rem;
     margin-left: .3125rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .hero-dashboard__schedule {
