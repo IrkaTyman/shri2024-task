@@ -352,7 +352,7 @@ body, html {
     bottom: 10px;
     transform: rotate(180deg);
     cursor: pointer;
-    background: url(../assets/arrow-left.png) 50% 50%;
+    background: url(../assets/arrow-left.png) no-repeat 50% 50%;
 }
 
 .section__arrow:hover {
