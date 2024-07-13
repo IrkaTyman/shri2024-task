@@ -306,7 +306,7 @@ export function Main() {
                     </ul>
                 </div>
                 {hasRightScroll &&
-                    <img className="section__arrow" onClick={onArrowCLick} src={ArrowLeft} loading="lazy"/>
+                    <div role="img" className="section__arrow" onClick={onArrowCLick}/>
                 }
             </div>
         </section>
