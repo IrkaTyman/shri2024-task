@@ -141,8 +141,8 @@ export function Main() {
         setActiveTab(event.target.value);
     };
 
-    let sizes: {width: number, height: number}[] = [];
-    const onSize = (size: {width: number, height: number}) => {
+    let sizes: { width: number, height: number }[] = [];
+    const onSize = (size: { width: number, height: number }) => {
         sizes = [...sizes, size];
     };
 
@@ -289,19 +289,22 @@ export function Main() {
             </div>
 
             <div className="section__panel-wrapper" ref={ref}>
-                {TABS_KEYS.map(key =>
-                    <div key={key} role="tabpanel" className={'section__panel' + (key === activeTab ? '' : ' section__panel_hidden')} aria-hidden={key === activeTab ? 'false' : 'true'} id={`panel_${key}`} aria-labelledby={`tab_${key}`}>
-                        <ul className="section__panel-list">
-                            {TABS[key].items.map((item, index) =>
+                <div role="tabpanel"
+                     className={'section__panel'}
+                     id={`panel_${activeTab}`}
+                     aria-labelledby={`tab_${activeTab}`}>
+                    <ul className="section__panel-list">
+                        {
+                            TABS[activeTab]?.items.map((event, index) => (
                                 <Event
                                     key={index}
-                                    {...item}
+                                    {...event}
                                     onSize={onSize}
                                 />
-                            )}
-                        </ul>
-                    </div>
-                )}
+                            ))
+                        }
+                    </ul>
+                </div>
                 {hasRightScroll &&
                     <img className="section__arrow" onClick={onArrowCLick} src={ArrowLeft} loading="lazy"/>
                 }
