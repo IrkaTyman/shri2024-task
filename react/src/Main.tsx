@@ -1,5 +1,8 @@
 import {useEffect, useRef, useState} from "react";
 import {Event} from "./Event";
+import ArrowLeft from './assets/arrow-left.png'
+
+const CloudDrizzle = require('./assets/cloud-drizzle.svg') as string
 
 const TABS: Record<string, {
     title: string,
@@ -183,11 +186,11 @@ export function Main() {
                                 +19
                                 <span className="a11y-hidden">°</span>
 
-                                <div
+                                <img
+                                    src={CloudDrizzle}
                                     className="hero-dashboard__icon hero-dashboard__icon_rain"
-                                    role="img"
-                                    aria-label="Дождь"
-                                ></div>
+                                    alt="Дождь"
+                                ></img>
                             </div>
                         </li>
                     </ul>
@@ -300,7 +303,7 @@ export function Main() {
                     </div>
                 )}
                 {hasRightScroll &&
-                    <div className="section__arrow" onClick={onArrowCLick}></div>
+                    <img className="section__arrow" onClick={onArrowCLick} src={ArrowLeft} loading="lazy"/>
                 }
             </div>
         </section>

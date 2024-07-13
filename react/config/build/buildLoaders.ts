@@ -13,8 +13,9 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const cssLoaders = buildCssLoader(isDev);
 
     const svgLoader = {
-        test: /\.svg$/i,
-        use: ['@svgr/webpack'],
+        test: /\.svg$/,
+        type: 'asset',
+        loader: 'svgo-loader'
     };
 
     const fileLoader = {
