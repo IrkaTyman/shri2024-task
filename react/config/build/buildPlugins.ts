@@ -26,7 +26,7 @@ export function buildPlugins({
         new CopyPlugin({
             patterns: [
                 { from: 'public/assets', to: 'assets' },
-                { from: 'public/styles', to: 'atyles' }
+                { from: 'public/styles', to: 'styles' }
             ],
         }),
     ];
